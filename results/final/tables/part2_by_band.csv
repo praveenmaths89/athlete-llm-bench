@@ -1,0 +1,19 @@
+model,cond,band,calls,said_real
+claude-haiku-5-5,C0,<2 cm,114,0.02631578947368421
+claude-haiku-5-5,C0,2-3.6 cm,64,0.625
+claude-haiku-5-5,C0,>3.6 cm,96,0.9791666666666666
+claude-haiku-5-5,C1,<2 cm,57,0.0
+claude-haiku-5-5,C1,2-3.6 cm,32,0.0625
+claude-haiku-5-5,C1,>3.6 cm,48,0.8958333333333334
+claude-opus-5-5,C0,<2 cm,57,0.0
+claude-opus-5-5,C0,2-3.6 cm,32,0.75
+claude-opus-5-5,C0,>3.6 cm,48,1.0
+claude-opus-5-5,C1,<2 cm,57,0.0
+claude-opus-5-5,C1,2-3.6 cm,32,0.0625
+claude-opus-5-5,C1,>3.6 cm,48,0.8958333333333334
+claude-sonnet-5-5,C0,<2 cm,114,0.0
+claude-sonnet-5-5,C0,2-3.6 cm,64,0.328125
+claude-sonnet-5-5,C0,>3.6 cm,96,0.9270833333333334
+claude-sonnet-5-5,C1,<2 cm,57,0.0
+claude-sonnet-5-5,C1,2-3.6 cm,32,0.0625
+claude-sonnet-5-5,C1,>3.6 cm,48,0.8958333333333334

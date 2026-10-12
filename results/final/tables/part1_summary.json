@@ -1,0 +1,8 @@
+{
+ "pairs": 137,
+ "athletes": 93,
+ "age_drift_median": -2.5,
+ "age_drift_p10": -13.04,
+ "age_drift_5plus": "36% [27, 45]",
+ "change_cm_median": 1.1349000000000018
+}

@@ -1,0 +1,14 @@
+claude-haiku-5-5 falls: shown:z coef 0.50 (95% CI -0.32, 1.33, p=0.231); top-tertile contrast 7.1 pp [-5.4, 19.6]
+claude-haiku-5-5 rises: shown:z coef -0.54 (95% CI -1.94, 0.86, p=0.447); top-tertile contrast 15.4 pp [1.9, 28.8]
+claude-haiku-5-5 verdict mix by shown (0 = no centile):
+verdict  cannot_tell   real  within_measurement_noise
+shown                                                
+0              0.033  0.397                     0.569
+1              0.014  0.478                     0.508
+claude-sonnet-5-5 falls: shown:z coef -0.92 (95% CI -2.30, 0.47, p=0.197); top-tertile contrast 32.1 pp [14.3, 50.0]
+claude-sonnet-5-5 rises: shown:z coef -2.06 (95% CI -3.70, -0.43, p=0.013); top-tertile contrast 38.5 pp [17.3, 59.6]
+claude-sonnet-5-5 verdict mix by shown (0 = no centile):
+verdict  cannot_tell   real  within_measurement_noise
+shown                                                
+0              0.939  0.056                     0.006
+1              0.572  0.281                     0.147

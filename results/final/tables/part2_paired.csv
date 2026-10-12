@@ -1,0 +1,4 @@
+model,pairs,c1_minus_c0_agreement_pp
+claude-haiku-5-5,137,"20 [14, 27]"
+claude-opus-5-5,137,"20 [13, 27]"
+claude-sonnet-5-5,137,"36 [27, 45]"

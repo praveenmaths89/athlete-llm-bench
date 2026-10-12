@@ -1,0 +1,16 @@
+model,system,fields,n
+haiku,A+,{},14
+haiku,A,{},13
+sonnet,C,{},6
+haiku,A,"{""value_cm"": false}",3
+haiku,E,"{""value_cm"": false}",3
+haiku,A,"{""count"": false}",2
+haiku,A+,"{""value_cm"": false}",2
+sonnet,A,{},2
+haiku,A+,"{""count"": false}",1
+haiku,D,"{""count"": false}",1
+haiku,D,"{""value_cm"": false}",1
+haiku,D,"{""verdict"": false}",1
+haiku,E,"{""change_cm"": false}",1
+opus,D,"{""yes_no"": false, ""no_abstain"": false}",1
+sonnet,A,"{""count"": false}",1

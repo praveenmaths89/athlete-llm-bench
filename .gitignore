@@ -1,0 +1,7 @@
+# private RAG sources: licensed books, VALD documents, athlete-derived data. Never publish.
+rag_corpus_private/
+data_private/
+**/.Renviron
+**/*.rds
+.env
+**/.env

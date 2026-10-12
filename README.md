@@ -1,0 +1,45 @@
+# lcb: a small benchmark of LLM systems on longitudinal athlete jump-test data
+
+This repository accompanies an anonymous submission. It contains the benchmark (questions, gold answers, de-identified data), the four systems that are compared, the scorer, the analysis code and the cached model responses, so that every table and figure of the paper can be rebuilt without an API key.
+
+## What is compared
+
+Letters below are the repository's. The paper relabels the systems as A, A+, B (agent, C here), C (multi-agent, D here) and D (fixed pipeline, E here); B here is a retrieval baseline that the paper does not use.
+
+Five ways of answering a coach's question about football countermovement-jump (CMJ) tests with one Claude model each time:
+
+| ID | System |
+| --- | --- |
+| A | one call; the data table, the centile grid and the trial table are in the prompt, no noise information |
+| A+ | A plus the cohort measurement-noise rule |
+| C | one agent with three tools (`sql`, `centile`, `tracking`) |
+| D | a coordinator that delegates to a data specialist and a statistics specialist |
+| E | fixed code builds an evidence bundle for the athlete named in the question, one call writes the answer |
+
+Questions come in five families: Q1 numerical lookups, Q2 centile position, Q3 longitudinal and cohort-level questions, Q4 change versus measurement noise, Q7 edge cases (missing athlete, missing test, one test only, missing trial, outside the reference range). Gold answers are computed by plain Python on the released tables; no model is used as a judge.
+
+## Layout
+
+```text
+src/lcb/            package: config, tools, llm client, benchmark (generator, gold, scorer), systems, runner, analysis, experiments
+data/release/       de-identified tests and trials tables (pseudonymous athlete ids; no names, no club)
+data/benchmark/     questions.jsonl, inventory.csv
+data/norm_grid/     centile lookup grid and its provenance
+runs/               cached responses of every system and model (one JSONL file per system and model)
+results/            aggregate tables and figures used in the paper
+tests/              unit tests (tools, release view, benchmark integrity)
+docs/               data statement, reproduction notes, ethics notes
+```
+
+## Reproduce
+
+```bash
+make install          # editable install with test dependencies
+make test             # unit tests, no key and no network
+make tables           # rebuild all result tables from the cached responses in runs/ (no API calls)
+make questions        # regenerate the benchmark from data/release (deterministic, seed 11)
+```
+To rerun a system yourself, put `ANTHROPIC_API_KEY` in a `.env` file and use `make run SYSTEM=C MODEL=haiku SPLIT=final`. The runner is resumable, caches every response, and stops at a cost cap. Hosted models can change; the cached responses are the record of what was measured, with the model identifiers and dates in `runs/`.
+
+## Data and licences
+Code: Apache-2.0. Data and questions: see `docs/DATA_STATEMENT.md`. The tables describe real athletes, among them children, with names, club and the original profile identifiers removed. Please read the data statement before using them.

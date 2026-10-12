@@ -1,0 +1,135 @@
+## Accuracy, final split
+
+ model system  questions      accuracy  no_answer_pct accuracy_adjusted  cost_per_q  turns  tool_calls  cohort_n    cohort_acc cohort_acc_adj  per_athlete_n per_athlete_acc per_athlete_acc_adj
+ haiku      A         70   91 [84, 97]            6.2      98 [94, 100]      0.0009    1.0         0.0         8   38 [12, 67]   92 [83, 100]             62    98 [95, 100]        98 [95, 100]
+ haiku     A+         70   92 [85, 98]            6.7       97 [93, 99]      0.0008    1.0         0.0         8   38 [12, 75]    79 [62, 96]             62    99 [97, 100]        99 [97, 100]
+ haiku      C         70 100 [94, 100]            0.0     100 [94, 100]      0.0009    2.5         2.0         8 100 [63, 100]  100 [63, 100]             62   100 [93, 100]       100 [93, 100]
+ haiku      D         70  99 [97, 100]            0.0      99 [97, 100]      0.0022    5.2         6.2         8  92 [83, 100]   92 [83, 100]             62    99 [98, 100]        99 [98, 100]
+ haiku      E         62  98 [94, 100]            0.0      98 [94, 100]      0.0003    1.0         0.0         0           n/a            n/a             62    98 [94, 100]        98 [94, 100]
+sonnet      A         70  96 [90, 100]            2.9      99 [95, 100]      0.0178    1.0         0.0         8   62 [25, 88]   88 [62, 100]             62   100 [93, 100]       100 [93, 100]
+sonnet      C         70   91 [84, 97]            8.6     100 [94, 100]      0.0211    3.2         2.7         8 100 [63, 100]  100 [63, 100]             62     90 [82, 97]       100 [93, 100]
+sonnet      D         70 100 [94, 100]            0.0     100 [94, 100]      0.0346    5.7         6.2         8 100 [63, 100]  100 [63, 100]             62   100 [93, 100]       100 [93, 100]
+sonnet      E         62 100 [93, 100]            0.0     100 [93, 100]      0.0048    1.0         0.0         0           n/a            n/a             62   100 [93, 100]       100 [93, 100]
+  opus      A         36 100 [89, 100]            0.0     100 [89, 100]      0.0460    1.0         0.0         4 100 [40, 100]  100 [40, 100]             32   100 [88, 100]       100 [88, 100]
+  opus      C         36 100 [89, 100]            0.0     100 [89, 100]      0.0350    2.6         1.8         4 100 [40, 100]  100 [40, 100]             32   100 [88, 100]       100 [88, 100]
+  opus      D         36  97 [91, 100]            0.0      97 [91, 100]      0.0767    4.9         8.1         4 100 [40, 100]  100 [40, 100]             32    97 [90, 100]        97 [90, 100]
+  opus      E         32 100 [88, 100]            0.0     100 [88, 100]      0.0098    1.0         0.0         0           n/a            n/a             32   100 [88, 100]       100 [88, 100]
+
+## By family
+
+ model system        Q1        Q2         Q3         Q4         Q7
+ haiku      A 100 (n=6) 100 (n=5)  79 (n=28) 100 (n=15) 100 (n=16)
+ haiku     A+ 100 (n=6) 100 (n=5)  80 (n=28) 100 (n=15) 100 (n=16)
+ haiku      C 100 (n=6) 100 (n=5) 100 (n=28) 100 (n=15) 100 (n=16)
+ haiku      D 100 (n=6) 100 (n=5)  98 (n=28)  98 (n=15) 100 (n=16)
+ haiku      E 100 (n=6) 100 (n=5)  93 (n=20) 100 (n=15) 100 (n=16)
+sonnet      A 100 (n=6) 100 (n=5)  89 (n=28) 100 (n=15) 100 (n=16)
+sonnet      C 100 (n=6) 100 (n=5) 100 (n=28) 100 (n=15)  62 (n=16)
+sonnet      D 100 (n=6) 100 (n=5) 100 (n=28) 100 (n=15) 100 (n=16)
+sonnet      E 100 (n=6) 100 (n=5) 100 (n=20) 100 (n=15) 100 (n=16)
+  opus      A 100 (n=3) 100 (n=3) 100 (n=14)  100 (n=8)  100 (n=8)
+  opus      C 100 (n=3) 100 (n=3) 100 (n=14)  100 (n=8)  100 (n=8)
+  opus      D 100 (n=3) 100 (n=3) 100 (n=14)  100 (n=8)   88 (n=8)
+  opus      E 100 (n=3) 100 (n=3) 100 (n=10)  100 (n=8)  100 (n=8)
+
+## Paired differences (percentage points)
+
+ outcome  model comparison                        subset  questions       diff_pp
+  strict  haiku  C minus A                         final         70     9 [3, 16]
+  strict  haiku  C minus A                  cohort_final          8   62 [33, 88]
+  strict  haiku  C minus A             per_athlete_final         62      2 [0, 5]
+  strict  haiku  D minus A                         final         70     7 [2, 14]
+  strict  haiku  D minus A                  cohort_final          8   54 [29, 79]
+  strict  haiku  D minus A             per_athlete_final         62     1 [-1, 5]
+  strict  haiku  D minus C                         final         70    -1 [-3, 0]
+  strict  haiku  D minus C                  cohort_final          8   -8 [-17, 0]
+  strict  haiku  D minus C             per_athlete_final         62    -1 [-2, 0]
+  strict  haiku  E minus C             final/per_athlete         62    -2 [-6, 0]
+  strict  haiku  E minus C per_athlete_final/per_athlete         62    -2 [-6, 0]
+  strict  haiku A+ minus A                      final/Q4         15      0 [0, 0]
+  strict  haiku A+ minus A          per_athlete_final/Q4         15      0 [0, 0]
+  strict sonnet  C minus A                         final         70   -4 [-13, 4]
+  strict sonnet  C minus A                  cohort_final          8   38 [12, 75]
+  strict sonnet  C minus A             per_athlete_final         62 -10 [-18, -3]
+  strict sonnet  D minus A                         final         70     4 [0, 10]
+  strict sonnet  D minus A                  cohort_final          8   38 [12, 75]
+  strict sonnet  D minus A             per_athlete_final         62      0 [0, 0]
+  strict sonnet  D minus C                         final         70     9 [3, 16]
+  strict sonnet  D minus C                  cohort_final          8      0 [0, 0]
+  strict sonnet  D minus C             per_athlete_final         62    10 [3, 18]
+  strict sonnet  E minus C             final/per_athlete         62    10 [3, 18]
+  strict sonnet  E minus C per_athlete_final/per_athlete         62    10 [3, 18]
+  strict   opus  C minus A                         final         36      0 [0, 0]
+  strict   opus  C minus A                  cohort_final          4      0 [0, 0]
+  strict   opus  C minus A             per_athlete_final         32      0 [0, 0]
+  strict   opus  D minus A                         final         36    -3 [-9, 0]
+  strict   opus  D minus A                  cohort_final          4      0 [0, 0]
+  strict   opus  D minus A             per_athlete_final         32   -3 [-10, 0]
+  strict   opus  D minus C                         final         36    -3 [-9, 0]
+  strict   opus  D minus C                  cohort_final          4      0 [0, 0]
+  strict   opus  D minus C             per_athlete_final         32   -3 [-10, 0]
+  strict   opus  E minus C             final/per_athlete         32      0 [0, 0]
+  strict   opus  E minus C per_athlete_final/per_athlete         32      0 [0, 0]
+adjusted  haiku  C minus A                         final         70      2 [0, 6]
+adjusted  haiku  C minus A                  cohort_final          8     8 [0, 17]
+adjusted  haiku  C minus A             per_athlete_final         62      2 [0, 5]
+adjusted  haiku  D minus A                         final         70     1 [-2, 5]
+adjusted  haiku  D minus A                  cohort_final          8   0 [-17, 17]
+adjusted  haiku  D minus A             per_athlete_final         62     1 [-1, 5]
+adjusted  haiku  D minus C                         final         70    -1 [-3, 0]
+adjusted  haiku  D minus C                  cohort_final          8   -8 [-17, 0]
+adjusted  haiku  D minus C             per_athlete_final         62    -1 [-2, 0]
+adjusted  haiku  E minus C             final/per_athlete         62    -2 [-6, 0]
+adjusted  haiku  E minus C per_athlete_final/per_athlete         62    -2 [-6, 0]
+adjusted  haiku A+ minus A                      final/Q4         15      0 [0, 0]
+adjusted  haiku A+ minus A          per_athlete_final/Q4         15      0 [0, 0]
+adjusted sonnet  C minus A                         final         70      1 [0, 5]
+adjusted sonnet  C minus A                  cohort_final          8    12 [0, 38]
+adjusted sonnet  C minus A             per_athlete_final         62      0 [0, 0]
+adjusted sonnet  D minus A                         final         70      1 [0, 5]
+adjusted sonnet  D minus A                  cohort_final          8    12 [0, 38]
+adjusted sonnet  D minus A             per_athlete_final         62      0 [0, 0]
+adjusted sonnet  D minus C                         final         70      0 [0, 0]
+adjusted sonnet  D minus C                  cohort_final          8      0 [0, 0]
+adjusted sonnet  D minus C             per_athlete_final         62      0 [0, 0]
+adjusted sonnet  E minus C             final/per_athlete         62      0 [0, 0]
+adjusted sonnet  E minus C per_athlete_final/per_athlete         62      0 [0, 0]
+adjusted   opus  C minus A                         final         36      0 [0, 0]
+adjusted   opus  C minus A                  cohort_final          4      0 [0, 0]
+adjusted   opus  C minus A             per_athlete_final         32      0 [0, 0]
+adjusted   opus  D minus A                         final         36    -3 [-9, 0]
+adjusted   opus  D minus A                  cohort_final          4      0 [0, 0]
+adjusted   opus  D minus A             per_athlete_final         32   -3 [-10, 0]
+adjusted   opus  D minus C                         final         36    -3 [-9, 0]
+adjusted   opus  D minus C                  cohort_final          4      0 [0, 0]
+adjusted   opus  D minus C             per_athlete_final         32   -3 [-10, 0]
+adjusted   opus  E minus C             final/per_athlete         32      0 [0, 0]
+adjusted   opus  E minus C per_athlete_final/per_athlete         32      0 [0, 0]
+
+## Haiku, all 119 questions
+
+system  questions      accuracy       cohort  cost_per_q
+     A        119   91 [86, 96]   25 [6, 47]      0.0009
+    A+        119   91 [86, 96]   25 [0, 50]      0.0008
+     C        119 100 [99, 100] 97 [92, 100]      0.0009
+     D        119  99 [97, 100] 92 [83, 100]      0.0018
+     E        107  98 [95, 100]          n/a      0.0003
+
+## Failures (final split), top
+
+ model system                                 fields  n
+ haiku     A+                                     {} 14
+ haiku      A                                     {} 13
+sonnet      C                                     {}  6
+ haiku      A                    {"value_cm": false}  3
+ haiku      E                    {"value_cm": false}  3
+ haiku      A                       {"count": false}  2
+ haiku     A+                    {"value_cm": false}  2
+sonnet      A                                     {}  2
+ haiku     A+                       {"count": false}  1
+ haiku      D                       {"count": false}  1
+ haiku      D                    {"value_cm": false}  1
+ haiku      D                     {"verdict": false}  1
+ haiku      E                   {"change_cm": false}  1
+  opus      D {"yes_no": false, "no_abstain": false}  1
+sonnet      A                       {"count": false}  1

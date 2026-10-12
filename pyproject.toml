@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lcb"
+version = "0.1.0"
+description = "Do LLM notes keep the noise threshold of an athlete cohort? Benchmark and experiments (anonymous submission code)."
+requires-python = ">=3.10"
+dependencies = ["anthropic>=1.13", "numpy", "pandas", "statsmodels", "matplotlib"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

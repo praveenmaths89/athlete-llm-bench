@@ -1,0 +1,23 @@
+{
+ "Male": {
+  "tests": 310,
+  "median_trials": 3.0,
+  "within_sd_cm": 2.27,
+  "te_mean_cm": 1.311,
+  "reliable_change_cm": 3.633
+ },
+ "Female": {
+  "tests": 76,
+  "median_trials": 2.0,
+  "within_sd_cm": 2.779,
+  "te_mean_cm": 1.965,
+  "reliable_change_cm": 5.447
+ },
+ "Pooled": {
+  "tests": 386,
+  "median_trials": 3.0,
+  "within_sd_cm": 2.379,
+  "te_mean_cm": 1.374,
+  "reliable_change_cm": 3.808
+ }
+}
