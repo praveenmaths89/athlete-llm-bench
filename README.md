@@ -22,6 +22,7 @@ Questions come in five families: Q1 numerical lookups, Q2 centile position, Q3 l
 
 ```text
 src/lcb/            package: config, tools, llm client, benchmark (generator, gold, scorer), systems, runner, analysis, experiments
+src/lcb/legacy/     scripts of the exploratory studies on real consecutive test pairs (Appendix G of the paper); they read private files (data_private/) that are not released, so they document the method but cannot be rerun here
 data/release/       de-identified tests and trials tables (pseudonymous athlete ids; no names, no club)
 data/benchmark/     questions.jsonl, inventory.csv
 data/norm_grid/     centile lookup grid and its provenance
