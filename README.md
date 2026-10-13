@@ -6,6 +6,8 @@ This repository accompanies an anonymous submission. It contains the benchmark (
 
 Letters below are the repository's. The paper relabels the systems as A, A+, B (agent, C here), C (multi-agent, D here) and D (fixed pipeline, E here); B here is a retrieval baseline that the paper does not use.
 
+Question families: the paper labels them Q1 lookup, Q2 centile, Q3 longitudinal, Q4 cohort-level, Q5 noise and Q6 edge cases; the repository's `family` field uses Q1, Q2, Q3 (including cohort-level questions, tagged `cohort`), Q4 (noise) and Q7 (edge cases).
+
 Five ways of answering a coach's question about football countermovement-jump (CMJ) tests with one Claude model each time:
 
 | ID | System |
@@ -29,7 +31,7 @@ data/norm_grid/     centile lookup grid and its provenance
 runs/               cached responses of every system and model (one JSONL file per system and model)
 results/            aggregate tables and figures used in the paper
 tests/              unit tests (tools, release view, benchmark integrity)
-docs/               data statement, reproduction notes, ethics notes
+docs/               data statement, reproduction notes, pre-registered analysis plans (ANALYSIS_*.md)
 ```
 
 ## Reproduce
