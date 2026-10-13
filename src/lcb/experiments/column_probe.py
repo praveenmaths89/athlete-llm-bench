@@ -5,7 +5,7 @@ from lcb.config import RESULTS, MODELS
 from lcb.llm.client import Claude
 from lcb.benchmark.column_questions import EXPLICIT, UNDERSPECIFIED
 
-OUT = RESULTS / "probe_columns"
+OUT = RESULTS / "exploratory" / "probe_columns"
 COLUMNS = (OUT / "schema_columns.txt").read_text().splitlines()
 SYSTEM = ("You map a coach's request to one column of a VALD ForceDecks results table. Answer only with the requested JSON.\n"
           "Columns (one per line):\n" + "\n".join(COLUMNS))

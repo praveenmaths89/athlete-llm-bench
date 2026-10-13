@@ -1,9 +1,9 @@
-"""Final analysis (plan A4). Writes tables to results/final/tables and figures to results/final/figures."""
+"""Final analysis (plan A4). Writes tables to results/exploratory/final/tables and figures to results/exploratory/final/figures."""
 import json, math, random, sys, collections
 from pathlib import Path
 import numpy as np, pandas as pd
 ROOT = Path(__file__).resolve().parents[3]
-F = ROOT / "results/final"; FIN = ROOT / "data_private/real_pairs/final"; T = F / "tables"; G = F / "figures"; T.mkdir(exist_ok=True, parents=True); G.mkdir(exist_ok=True, parents=True)
+F = ROOT / "results/exploratory/final"; FIN = ROOT / "data_private/real_pairs/final"; T = F / "tables"; G = F / "figures"; T.mkdir(exist_ok=True, parents=True); G.mkdir(exist_ok=True, parents=True)
 TE = json.loads((ROOT / "results/typical_error.json").read_text())
 cases = pd.DataFrame(json.load(open(FIN / "cases.json"))); cases["adv"] = cases["dv"].abs()
 Z = {"68%": 1.0, "90%": 1.645, "95%": 1.96}

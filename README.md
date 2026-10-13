@@ -29,7 +29,7 @@ data/release/       de-identified tests and trials tables (pseudonymous athlete 
 data/benchmark/     questions.jsonl, inventory.csv
 data/norm_grid/     centile lookup grid and its provenance
 runs/               cached responses of every system and model (one JSONL file per system and model)
-results/            aggregate tables and figures used in the paper
+results/            aggregate tables and figures used in the paper (results/exploratory: outputs of the exploratory studies, Appendix G)
 tests/              unit tests (tools, release view, benchmark integrity)
 docs/               data statement, reproduction notes, pre-registered analysis plans (ANALYSIS_*.md)
 ```

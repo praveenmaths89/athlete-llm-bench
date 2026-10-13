@@ -11,7 +11,7 @@ from lcb.llm.client import Claude, CreditExhausted
 from lcb.tools.centile_tool import centile, value_at_centile
 from lcb.analysis.stats import cluster_bootstrap, gee_logit
 
-OUT = RESULTS / "a5"
+OUT = RESULTS / "exploratory" / "a5"
 SEXES = ("Male", "Female"); AGES = (10, 12, 14, 16, 20); GAP_Y = 0.5; BASES = (25, 50, 75); SIZES = (1.5, 2.5, 3.2); SIGNS = (1, -1)
 INSTR = ("\nReturn JSON with: jump_change_is (real | within_measurement_noise | cannot_tell), centile_change_reason "
          "(what mainly caused the centile change: jump_change | age_drift | both | none; none if no centile is given), noise_threshold_cm "
