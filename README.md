@@ -1,6 +1,6 @@
 # lcb: a small benchmark of LLM systems on longitudinal athlete jump-test data
 
-This repository accompanies an anonymous submission. It contains the benchmark (questions, gold answers, de-identified data), the four systems that are compared, the scorer, the analysis code and the cached model responses, so that every table and figure of the paper can be rebuilt without an API key.
+This repository accompanies an anonymous submission. It contains the benchmark (questions, gold answers, de-identified data), the five systems that are compared, the scorer, the analysis code and the cached model responses, so that every table and figure of the paper can be rebuilt without an API key.
 
 ## What is compared
 
