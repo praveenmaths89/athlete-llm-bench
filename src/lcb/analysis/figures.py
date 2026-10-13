@@ -32,7 +32,7 @@ def sweep():
 
 def cost():
     df = ft.load(); pq = ft.per_question(df); fin = pq[(pq.split == "final") & (~pq.cohort)]
-    fig, ax = plt.subplots(figsize=(2.2, 2.2)); syss = ft.SYS_ORDER; w = 0.16
+    fig, ax = plt.subplots(figsize=(2.2, 2.2)); syss = [x for x in ft.SYS_ORDER if x != "A+"]; w = 0.16
     for i, s in enumerate(syss):
         vals = [fin[(fin.model == m) & (fin.system == s)].cost.mean() for m in ("haiku", "sonnet", "opus")]
         xs = [k + (i - (len(syss) - 1) / 2) * w for k in range(3)]
@@ -45,7 +45,7 @@ def cost():
 
 def latency():
     df = ft.load(); pq = ft.per_question(df); fin = pq[(pq.split == "final") & (~pq.cohort)]
-    fig, ax = plt.subplots(figsize=(2.2, 2.2)); syss = ft.SYS_ORDER; w = 0.16
+    fig, ax = plt.subplots(figsize=(2.2, 2.2)); syss = [x for x in ft.SYS_ORDER if x != "A+"]; w = 0.16
     for i, s in enumerate(syss):
         vals = [fin[(fin.model == m) & (fin.system == s)].seconds.mean() for m in ("haiku", "sonnet", "opus")]
         xs = [k + (i - (len(syss) - 1) / 2) * w for k in range(3)]

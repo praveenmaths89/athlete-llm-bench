@@ -4,7 +4,7 @@ This repository accompanies an anonymous submission. It contains the benchmark (
 
 ## What is compared
 
-Letters below are the repository's. The paper relabels the systems as A, A+, B (agent, C here), C (multi-agent, D here) and D (fixed pipeline, E here); B here is a retrieval baseline that the paper does not use.
+Letters below are the repository's. The paper relabels the systems as A, B (agent, C here), C (multi-agent, D here) and D (fixed pipeline, E here); B here is a retrieval baseline that the paper does not use. A+ (A with the noise rule added, run with Haiku only) is in the repository and in the cached runs but is not reported in the paper.
 
 Question families: the paper labels them Q1 lookup, Q2 centile, Q3 longitudinal, Q4 cohort-level, Q5 noise and Q6 edge cases; the repository's `family` field uses Q1, Q2, Q3 (including cohort-level questions, tagged `cohort`), Q4 (noise) and Q7 (edge cases).
 
