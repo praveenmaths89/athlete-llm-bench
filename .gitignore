@@ -5,3 +5,10 @@ data_private/
 **/*.rds
 .env
 **/.env
+
+# Python and OS artefacts
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.DS_Store
