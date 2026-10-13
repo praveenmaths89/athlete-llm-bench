@@ -41,3 +41,13 @@ def test_tracking_matches_manual_computation_and_label():
 def test_tracking_single_test_is_insufficient_history():
     a = tb.db.query("SELECT athlete FROM tests GROUP BY athlete HAVING COUNT(*) = 1 LIMIT 1")["rows"][0][0]
     assert tb.call("tracking", {"athlete": a, "from_index": 1, "to_index": 2})["label"] == "insufficient_history"
+
+
+def test_noise_recomputed_from_release_is_close_to_stored():
+    """The stored noise estimate came from the source extract; the released tables must give a similar value (within 0.3 cm)."""
+    import json
+    from lcb.config import NOISE_PATH
+    from lcb.tools.noise_estimate import estimate
+    new, stored = estimate(), json.loads(NOISE_PATH.read_text())
+    for g in ("Male", "Female"):
+        assert abs(new[g]["reliable_change_cm"] - stored[g]["reliable_change_cm"]) < 0.3
