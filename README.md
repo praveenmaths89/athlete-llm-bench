@@ -1,6 +1,6 @@
 # lcb: a small benchmark of LLM systems on longitudinal athlete jump-test data
 
-This repository accompanies an anonymous submission. It contains the benchmark (questions, gold answers, de-identified data), the five systems that are compared, the scorer, the analysis code and the cached model responses, so that every table and figure of the paper can be rebuilt without an API key.
+This repository accompanies an anonymous submission. It contains the benchmark (questions, gold answers, de-identified data), the five systems that are compared, the scorer, the analysis code and the cached model responses, so that every result table and plot can be rebuilt without an API key.
 
 ## What is compared
 
@@ -29,7 +29,7 @@ data/release/       de-identified tests and trials tables (pseudonymous athlete 
 data/benchmark/     questions.jsonl, inventory.csv
 data/norm_grid/     centile lookup grid and its provenance
 runs/               cached responses of every system and model (one JSONL file per system and model)
-results/            aggregate tables and figures used in the paper (results/exploratory: outputs of the exploratory studies, Appendix G)
+results/            aggregate result tables and plots (results/exploratory: outputs of the exploratory studies, Appendix G)
 tests/              unit tests (tools, release view, benchmark integrity)
 docs/               data statement, reproduction notes, pre-registered analysis plans (ANALYSIS_*.md)
 ```
@@ -39,7 +39,7 @@ docs/               data statement, reproduction notes, pre-registered analysis 
 ```bash
 make install          # editable install with test dependencies
 make test             # unit tests, no key and no network
-make tables           # rebuild all result tables from the cached responses in runs/ (no API calls)
+make tables           # rebuild the result tables and plots in results/ from the cached responses in runs/ (no API calls)
 make questions        # regenerate the benchmark from data/release (deterministic, seed 11)
 ```
 To rerun a system yourself, put `ANTHROPIC_API_KEY` in a `.env` file and use `make run SYSTEM=C MODEL=haiku SPLIT=final`. The runner is resumable, caches every response, and stops at a cost cap. Hosted models can change; the cached responses are the record of what was measured, with the model identifiers and dates in `runs/`.

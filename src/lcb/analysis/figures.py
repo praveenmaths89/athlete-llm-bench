@@ -1,4 +1,4 @@
-"""Figures 2 and 3 of the paper, from the cached runs. Writes paper/figures/fig_sweep.pdf and fig_cost.pdf (with png previews)."""
+"""Plots from the cached runs: output-cap sweep, cost per question and latency per question. Writes results/figures/*.pdf and *.png."""
 import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
@@ -12,7 +12,7 @@ NAME = {"haiku": "Haiku 5.5", "sonnet": "Sonnet 5.5", "opus": "Opus 5.5"}
 plt.rcParams.update({"font.size": 8, "axes.labelsize": 8, "xtick.labelsize": 7.5, "ytick.labelsize": 7.5, "legend.fontsize": 7,
                      "axes.spines.top": False, "axes.spines.right": False, "font.family": "serif"})
 LAB = {"A": "A", "A+": "A+", "C": "B", "D": "C", "E": "D"}
-FIG = ROOT / "paper/figures"
+FIG = ROOT / "results/figures"; FIG.mkdir(parents=True, exist_ok=True)
 
 
 def sweep():
