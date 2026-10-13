@@ -9,7 +9,7 @@ from lcb.analysis import final_tables as ft
 SC = {"A": "#7f7f7f", "A+": "#bdbdbd", "C": "#1f77b4", "D": "#e69f00", "E": "#2ca02c"}
 MARK = {"haiku": "o", "sonnet": "s", "opus": "^"}
 NAME = {"haiku": "Haiku 5.5", "sonnet": "Sonnet 5.5", "opus": "Opus 5.5"}
-plt.rcParams.update({"font.size": 8, "axes.labelsize": 8, "xtick.labelsize": 7.5, "ytick.labelsize": 7.5, "legend.fontsize": 7,
+plt.rcParams.update({"pdf.fonttype": 42, "font.size": 8, "axes.labelsize": 8, "xtick.labelsize": 7.5, "ytick.labelsize": 7.5, "legend.fontsize": 7,
                      "axes.spines.top": False, "axes.spines.right": False, "font.family": "serif"})
 LAB = {"A": "A", "A+": "A+", "C": "B", "D": "C", "E": "D"}
 FIG = ROOT / "results/figures"; FIG.mkdir(parents=True, exist_ok=True)
