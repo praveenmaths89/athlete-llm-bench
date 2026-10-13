@@ -28,6 +28,7 @@ src/lcb/legacy/     scripts of the exploratory studies on real consecutive test 
 data/release/       de-identified tests and trials tables (pseudonymous athlete ids; no names, no club)
 data/benchmark/     questions.jsonl, inventory.csv
 data/norm_grid/     centile lookup grid and its provenance
+centile_model/      R script that fits the centile model and writes the grid (needs the full database for the shipped grid; see data/norm_grid/PROVENANCE.md)
 runs/               cached responses of every system and model (one JSONL file per system and model)
 results/            aggregate result tables and plots (results/exploratory: outputs of the exploratory studies, Appendix G)
 tests/              unit tests (tools, release view, benchmark integrity)
