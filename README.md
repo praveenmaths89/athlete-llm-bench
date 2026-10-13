@@ -46,4 +46,4 @@ make questions        # regenerate the benchmark from data/release (deterministi
 To rerun a system yourself, put `ANTHROPIC_API_KEY` in a `.env` file and use `make run SYSTEM=C MODEL=haiku SPLIT=final`. The runner is resumable, caches every response, and stops at a cost cap. Hosted models can change; the cached responses are the record of what was measured, with the model identifiers and dates in `runs/`.
 
 ## Data and licences
-Code: Apache-2.0. Data and questions: see `docs/DATA_STATEMENT.md`. The tables describe real athletes, among them children, with names, club and the original profile identifiers removed. Please read the data statement before using them.
+Code: Apache-2.0. Tables, questions and cached responses: CC BY-NC 4.0 (see `docs/DATA_STATEMENT.md`). The tables describe real athletes, among them children, with names, club and the original profile identifiers removed. Please read the data statement before using them.
